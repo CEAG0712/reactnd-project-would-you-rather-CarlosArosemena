@@ -3,6 +3,7 @@ import "./App.css";
 import { MainGrid } from "./components/ui-elements/MainGrid";
 import { handleInitialData } from "./actions/shared";
 import { connect } from "react-redux";
+import Login from "./components/Login";
 
 class App extends Component {
   componentDidMount() {
@@ -13,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <MainGrid>
-          <p> Sample Page</p>
+          <Login />
         </MainGrid>
       </div>
     );

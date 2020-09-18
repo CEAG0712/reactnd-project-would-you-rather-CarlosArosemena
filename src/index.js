@@ -7,6 +7,7 @@ import { createStore, compose } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducers/index";
 import middleware from "./middleware";
+import "semantic-ui-css/semantic.min.css";
 
 const ReactReduxDevTools =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
