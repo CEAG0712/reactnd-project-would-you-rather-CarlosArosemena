@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import NavBar from "./components/ui-elements/NavBar";
 import HomePage from "./components/HomePage";
 import QuestionCard from "./components/QuestionCard";
+import AddQuestion from "./components/AddQuestion";
 
 class App extends Component {
   componentDidMount() {
@@ -37,6 +38,7 @@ class App extends Component {
                     path="/questions/:question_id"
                     component={QuestionCard}
                   />
+                  <Route exact path="/add" component={AddQuestion} />
                 </Switch>
               </MainGrid>
             </Fragment>

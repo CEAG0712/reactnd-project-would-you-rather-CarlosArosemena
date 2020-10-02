@@ -1,6 +1,7 @@
 import {
   RECEIVE_QUESTIONS,
   UPDATE_ANSWER_TO_QUESTION,
+  CREATE_NEW_QUESTION,
 } from "../actions/questions";
 
 export default function questions(state = {}, action) {
@@ -22,6 +23,13 @@ export default function questions(state = {}, action) {
             votes: state[id][answer].votes.concat(authUser),
           },
         },
+      };
+
+    case CREATE_NEW_QUESTION:
+      const { question } = action;
+      return {
+        ...state,
+        [question.id]: question,
       };
     default:
       return state;
