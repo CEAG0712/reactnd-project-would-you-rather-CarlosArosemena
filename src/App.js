@@ -9,6 +9,8 @@ import NavBar from "./components/ui-elements/NavBar";
 import HomePage from "./components/HomePage";
 import QuestionCard from "./components/QuestionCard";
 import AddQuestion from "./components/AddQuestion";
+import Leaderboard from "./components/Leaderboard";
+import NotFound404 from "./components/ui-elements/NotFound404";
 
 class App extends Component {
   componentDidMount() {
@@ -39,6 +41,8 @@ class App extends Component {
                     component={QuestionCard}
                   />
                   <Route exact path="/add" component={AddQuestion} />
+                  <Route exact path="/leaderboard" component={Leaderboard} />
+                  <Route component={NotFound404} />
                 </Switch>
               </MainGrid>
             </Fragment>

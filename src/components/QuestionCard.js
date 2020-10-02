@@ -4,6 +4,7 @@ import QuestionPreview from "./QuestionPreview";
 import { Segment, Header, Grid, Image } from "semantic-ui-react";
 import PollResult from "./PollResult";
 import { connect } from "react-redux";
+import NotFound404 from "./ui-elements/NotFound404";
 
 const viewTypes = {
   QUESTION_PREVIEW: "QUESTION_PREVIEW",
@@ -28,8 +29,18 @@ const QuestionContent = (props) => {
 
 class QuestionCard extends Component {
   render() {
-    const { author, question, viewType, unanswered = null } = this.props;
-    console.log(viewType);
+    const {
+      author,
+      question,
+      viewType,
+      badPath,
+      unanswered = null,
+    } = this.props;
+
+    if (badPath === true) {
+      return <NotFound404 />;
+    }
+
     return (
       <Segment.Group>
         <Header as="h5" textAlign="left" block attached="top">
