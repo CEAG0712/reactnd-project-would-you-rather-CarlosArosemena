@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Segment,
-  Grid,
-  Header,
-  Image,
-  Form,
-  Loader,
-  Dimmer,
-} from "semantic-ui-react";
+import { Grid, Header } from "semantic-ui-react";
 
 const headerGreeting = "Welcome to the Would You Rather App!";
 const subHeaderInstruction = "Please sign in to continue";

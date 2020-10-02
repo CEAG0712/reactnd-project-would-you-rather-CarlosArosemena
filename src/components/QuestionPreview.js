@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { Redirect, withRouter } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Header, Button } from "semantic-ui-react";
-import { connect } from "react-redux";
 
 class QuestionPreview extends Component {
   state = {
